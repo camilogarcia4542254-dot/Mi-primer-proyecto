@@ -1,0 +1,19 @@
+public class Parqueadero {
+
+    private static final int TOTAL_CELDAS = 30;
+    private static final double INCREMENTO_2026 = 0.12; // ejemplo 12%
+
+    public double calcularMensualidad(int cilindraje) {
+        if (cilindraje <= 1600) {
+            return 150000;
+        } else if (cilindraje <= 2000) {
+            return 200000;
+        } else {
+            return 250000;
+        }
+    }
+
+    public double aplicarIncremento(double valorBase) {
+        return valorBase + (valorBase * INCREMENTO_2026);
+    }
+}
